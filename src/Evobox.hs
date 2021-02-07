@@ -1,7 +1,7 @@
 {- |
-Copyright: (c) 2021 Nolrai
+Copyright: (c) 2021 Christopher A. Upshaw
 SPDX-License-Identifier: MIT
-Maintainer: Nolrai <chrisaupshaw@gmail.com>
+Maintainer: Christopher A. Upshaw <chrisaupshaw@gmail.com>
 
 See README for more info
 -}

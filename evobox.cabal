@@ -9,9 +9,9 @@ homepage:            https://github.com/Nolrai/evobox
 bug-reports:         https://github.com/Nolrai/evobox/issues
 license:             MIT
 license-file:        LICENSE
-author:              Nolrai
-maintainer:          Nolrai <chrisaupshaw@gmail.com>
-copyright:           2021 Nolrai
+author:              Christopher A. Upshaw
+maintainer:          Christopher A. Upshaw <chrisaupshaw@gmail.com>
+copyright:           2021 Christopher A. Upshaw
 build-type:          Simple
 extra-doc-files:     README.md
                      CHANGELOG.md
@@ -57,6 +57,26 @@ library
 executable evobox
   import:              common-options
   hs-source-dirs:      app
+  main-is:             Main.hs
+  build-depends:       evobox
+  ghc-options:         -threaded
+                       -rtsopts
+                       -with-rtsopts=-N
+
+test-suite evobox-test
+  import:              common-options
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      test
+  main-is:             Spec.hs
+  build-depends:       evobox
+  ghc-options:         -threaded
+                       -rtsopts
+                       -with-rtsopts=-N
+
+benchmark evobox-benchmark
+  import:              common-options
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      benchmark
   main-is:             Main.hs
   build-depends:       evobox
   ghc-options:         -threaded
